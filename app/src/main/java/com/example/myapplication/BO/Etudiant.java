@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.myapplication.BO;
 
 public class Etudiant {
     private int idEtu;
