@@ -4,7 +4,6 @@ import java.util.Date;
 
 public class Bilan {
     private int idBilan;
-    private String Libelle;
     private Date dateVisite;
     private Date dateLimite;
     private float noteEnt;
@@ -12,10 +11,11 @@ public class Bilan {
     private float noteOral;
     private String remarque;
     private String sujMemoire;
+    private Etudiant idEtu;
 
-    public Bilan(int idBilan, String libelle, Date dateVisite, Date dateLimite, float noteEnt, float noteDoss, float noteOral, String remarque, String sujMemoire) {
+
+    public Bilan(int idBilan, Date dateVisite, Date dateLimite, float noteEnt, float noteDoss, float noteOral, String remarque, String sujMemoire, Etudiant idEtu) {
         this.idBilan = idBilan;
-        Libelle = libelle;
         this.dateVisite = dateVisite;
         this.dateLimite = dateLimite;
         this.noteEnt = noteEnt;
@@ -23,6 +23,7 @@ public class Bilan {
         this.noteOral = noteOral;
         this.remarque = remarque;
         this.sujMemoire = sujMemoire;
+        this.idEtu = idEtu;
     }
 
     public int getIdBilan() {
@@ -31,14 +32,6 @@ public class Bilan {
 
     public void setIdBilan(int idBilan) {
         this.idBilan = idBilan;
-    }
-
-    public String getLibelle() {
-        return Libelle;
-    }
-
-    public void setLibelle(String libelle) {
-        Libelle = libelle;
     }
 
     public Date getDateVisite() {
@@ -95,5 +88,13 @@ public class Bilan {
 
     public void setSujMemoire(String sujMemoire) {
         this.sujMemoire = sujMemoire;
+    }
+
+    public Etudiant getIdEtu() {
+        return idEtu;
+    }
+
+    public void setIdEtu(Etudiant idEtu) {
+        this.idEtu = idEtu;
     }
 }

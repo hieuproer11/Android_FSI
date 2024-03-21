@@ -8,6 +8,8 @@ import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.myapplication.DAO.MySQLiteHelper;
+
 
 public class SecondActivity extends AppCompatActivity {
 
@@ -15,10 +17,12 @@ public class SecondActivity extends AppCompatActivity {
     private Button ButtonNotes;
     private ImageButton ButtonRetour;
     private ImageButton ButtonExit;
+    MySQLiteHelper mydb;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.second_activity);
+        mydb = new MySQLiteHelper(this);
         initialisation();
     }
 

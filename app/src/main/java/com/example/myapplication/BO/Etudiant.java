@@ -6,17 +6,21 @@ public class Etudiant {
     private String prenom;
     private String adresse;
     private String mail;
+    private String tel;
+    private String classe;
     private String speci;
-    private Bilan idBilan;
 
-    public Etudiant(int idEtu, String nom, String prenom, String adresse, String mail, String speci, Bilan idBilan) {
+
+    public Etudiant(int idEtu, String nom, String prenom, String adresse, String mail, String tel, String classe, String speci) {
         this.idEtu = idEtu;
         this.nom = nom;
         this.prenom = prenom;
         this.adresse = adresse;
         this.mail = mail;
+        this.tel = tel;
+        this.classe = classe;
         this.speci = speci;
-        this.idBilan = idBilan;
+
     }
 
     public int getIdEtu() {
@@ -67,11 +71,19 @@ public class Etudiant {
         this.speci = speci;
     }
 
-    public Bilan getIdBilan() {
-        return idBilan;
+    public String getTel() {
+        return tel;
     }
 
-    public void setIdBilan(Bilan idBilan) {
-        this.idBilan = idBilan;
+    public void setTel(String tel) {
+        this.tel = tel;
+    }
+
+    public String getClasse() {
+        return classe;
+    }
+
+    public void setClasse(String classe) {
+        this.classe = classe;
     }
 }

@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.myapplication.DAO.MySQLiteHelper;
+
 public class ThirdActivity extends AppCompatActivity {
 
     private TextView Nom;
@@ -30,10 +32,12 @@ public class ThirdActivity extends AppCompatActivity {
 
     private ImageButton ButtonRetour;
     private ImageButton ButtonExit;
+    MySQLiteHelper db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.third_activity);
+        db = new MySQLiteHelper(this);
         initialisation();
     }
 

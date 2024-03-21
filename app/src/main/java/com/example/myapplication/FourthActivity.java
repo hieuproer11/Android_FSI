@@ -56,7 +56,7 @@ public class FourthActivity extends AppCompatActivity {
 
         ButtonRetour=(ImageButton) findViewById(R.id.ButtonRetour);
         ButtonExit=(ImageButton) findViewById(R.id.ButtonExit);
-        Intent intent = new Intent(FourthActivity.this, ThirdActivity.class);
+        Intent intent = new Intent(FourthActivity.this, SecondActivity.class);
         Intent intent1 = new Intent(FourthActivity.this, MainActivity.class);
 
         ButtonRetour.setOnClickListener(new View.OnClickListener() {

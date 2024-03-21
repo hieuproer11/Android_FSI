@@ -30,7 +30,7 @@ public SQLiteDatabase database;
     @Override
     public Etudiant find(int id) {
         Etudiant unEtudiant = null;
-            Cursor curseur = database.query(true, "ETUDIANT", new String[]{"idEtu", "nom", "prenom", "adresse", "mail", "speci"},
+            Cursor curseur = database.query(true, "Etudiant", new String[]{"idEtu", "nom", "prenom", "adresse", "tel", "mail", "classe", "speci"},
             "idEtu = " +id, null, null, null, null, null);
         while (curseur.moveToNext()){
             unEtudiant = cursorToEtudiant(curseur);

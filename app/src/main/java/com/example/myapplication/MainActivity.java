@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.myapplication.DAO.MySQLiteHelper;
+
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
@@ -27,14 +29,17 @@ public class MainActivity extends AppCompatActivity {
     private Utilisateur user;
     private String idLogin;
     private String mdp;
+    MySQLiteHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        db = new MySQLiteHelper(this);
         initialisation();
         init_Utilisateur();
     }
+
 
     public void initialisation(){
         Intent intent = new Intent(MainActivity.this,SecondActivity.class);
@@ -61,13 +66,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void init_Utilisateur(){
-        Utilisateur user1 = new Utilisateur("hieu","123456");
-        Utilisateur user2 = new Utilisateur("tran", "1234");
-        Utilisateur user3 = new Utilisateur("tran hieu", "654321");
+        Utilisateur user1 = new Utilisateur("ayoub","1111");
+        Utilisateur user2 = new Utilisateur("augustin", "2222");
+        Utilisateur user3 = new Utilisateur("damien", "3333");
+        Utilisateur user4 = new Utilisateur("alice", "4444");
+        Utilisateur user5 = new Utilisateur("leroy", "5555");
+        Utilisateur user6 = new Utilisateur("lambert", "6666");
         mesUtilisateurs = new ArrayList<Utilisateur>();
         mesUtilisateurs.add(user1);
         mesUtilisateurs.add(user2);
         mesUtilisateurs.add(user3);
+        mesUtilisateurs.add(user4);
+        mesUtilisateurs.add(user5);
+        mesUtilisateurs.add(user6);
     }
 
     public boolean controle(String idLogin, String mdp){
